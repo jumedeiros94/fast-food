@@ -1,35 +1,24 @@
-# Totem de Auto-atendimento - Lanchonete FastFood
+# Totem de Auto-atendimento - Sistema de Pedido Autônomo para Lanchonete FastFood
 
-Este projeto consiste no desenvolvimento de um sistema de totem de auto-atendimento para uma lanchonete FastFood. O objetivo é modernizar o sistema de pedidos, permitindo que os clientes façam seus pedidos de forma autônoma e eficiente, liberando os operadores de caixa para outras funções.
+Este repositório contém o código-fonte e a documentação para o sistema de totem de auto-atendimento desenvolvido em Kotlin para modernizar a experiência de compra em uma lanchonete FastFood. O objetivo é permitir que os clientes façam pedidos de forma autônoma, liberando os operadores de caixa para outras funções e agilizando o processo de compra.
 
-## Requisitos Funcionais
+## Requisitos
 
-1. Tela Inicial:
-   - O totem deve exibir um menu onde o cliente pode escolher entre "Lanche" (1) ou "Bebida" (2).
-   - Qualquer entrada fora dessas opções deve mostrar a mensagem "Opção inválida, tente novamente" e exibir o menu novamente.
-   - A entrada deve ser um número inteiro.
+O sistema de totem de auto-atendimento deve atender aos seguintes requisitos:
 
-2. Opções de Lanche:
-   - Ao escolher "Lanche" (1), o cliente deve selecionar entre "X-burger" (1) ou "X-salada" (2).
-   - Entradas inválidas devem mostrar a mensagem "Opção inválida, tente novamente".
-   - A entrada deve ser um número inteiro.
-
-3. Opções de Bebida:
-   - Ao escolher "Bebida" (2), o cliente deve selecionar entre "Refrigerante" (1) ou "Suco" (2).
-   - Entradas inválidas devem mostrar a mensagem "Opção inválida, tente novamente".
-   - A entrada deve ser um número inteiro.
-
-4. Quantidade e Carrinho de Compras:
-   - Após selecionar o item desejado e a quantidade, o sistema deve adicionar os detalhes do pedido ao carrinho de compras.
-   - O valor total do pedido até o momento deve ser exibido.
-
-5. Edição e Remoção de Itens:
-   - O cliente pode editar a quantidade de itens no carrinho ou remover um item.
-   - Ao remover um item, o sistema deve exibir o carrinho atualizado.
-
-6. Finalização do Pedido:
-   - O cliente pode finalizar o pedido, fornecendo a forma de pagamento: cartão de crédito, cartão de débito, vale refeição ou dinheiro.
-   - Caso a forma de pagamento seja dinheiro, o sistema deve calcular o troco, se necessário.
+1. A tela inicial deve apresentar um menu onde o cliente pode selecionar entre comprar um **Lanche** (opção 1) ou uma **Bebida** (opção 2).
+2. Caso o cliente insira uma opção inválida, o sistema deve mostrar a mensagem "Opção inválida, tente novamente" e apresentar novamente o menu inicial.
+3. O sistema deve aceitar apenas o número da opção (1 para Lanche e 2 para Bebida).
+4. Se o cliente inserir um valor não numérico, o sistema deve retornar a mensagem "Formato inválido, para escolher o item, você deve informar o número dele".
+5. Ao selecionar Lanche (1), o sistema deve exibir as opções: 1. X-burger e 2. X-salada. Caso o cliente escolha uma opção inválida, a mensagem "Opção inválida, tente novamente" deve ser exibida.
+6. O sistema deve permitir ao cliente selecionar a quantidade do lanche desejada. O carrinho de compra deve mostrar o código, quantidade, nome e valor do lanche, bem como o valor total do pedido até aquele momento.
+   - X-burger: R$ 10,00
+   - X-salada: R$ 12,00
+7. Ao selecionar Bebida (2), o sistema deve exibir as opções: 1. Refrigerante e 2. Suco. Caso o cliente escolha uma opção inválida, a mensagem "Opção inválida, tente novamente" deve ser exibida.
+8. O sistema deve permitir ao cliente selecionar a quantidade de bebidas desejada. O carrinho de compra deve mostrar o código, quantidade, nome e valor da bebida, bem como o valor total do pedido até aquele momento.
+   - Refrigerante: R$ 8,00
+   - Suco: R$ 6,00
+9. Após selecionar o item e a quantidade, o sistema deve dar ao cliente a opção de incluir mais itens, editar um item, remover um item ou finalizar o pedido.
 
 ## Executando o Projeto
 
@@ -40,6 +29,8 @@ Este projeto consiste no desenvolvimento de um sistema de totem de auto-atendime
 ## Contribuição
 
 Contribuições são bem-vindas! Se você encontrar problemas ou tiver sugestões para melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+
 
 
 
