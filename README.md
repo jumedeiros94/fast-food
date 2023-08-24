@@ -1,57 +1,45 @@
-<h1>Totem de Auto-atendimento 🍔</h1>
+# Totem de Auto-atendimento - Lanchonete FastFood
 
-Uma lanchonete FastFood que quer modernizar o sistema deles para liberar as pessoas operadoras de caixa para outras funções e permitir que seus clientes façam os pedidos de forma autônoma e passem no balcão apenas para retirada de seus pedidos prontos para consumo. 
-Dessa forma, você vai criar um sistema para totem de auto-atendimento que deve atender aos seguintes requisitos: 
-1. A tela inicial deve ter um menu onde a pessoa deve selecionar se ela quer comprar:
- 
-1. Lanche
-2. Bebida
+Este projeto consiste no desenvolvimento de um sistema de totem de auto-atendimento para uma lanchonete FastFood. O objetivo é modernizar o sistema de pedidos, permitindo que os clientes façam seus pedidos de forma autônoma e eficiente, liberando os operadores de caixa para outras funções.
 
- 
-- Caso a pessoa tente escolher algum item fora das opções acima, o sistema deve mostrar a mensagem “Opção inválida, tente novamente” e mostrar novamente o menu inicial. 
-- O sistema deve aceitar apenas o número da opção, ou seja, se a pessoa quiser um lanche ela deve inserir 1 e caso queira uma bebida ela deve digitar 2. 
-- Caso a pessoa tente inserir alguma informação do tipo String o sistema deve retornar uma mensagem: “Formato inválido, para escolher o item, você deve informar o número dele”. 
-- Quando digitar 1, ou seja, o item Lanche, deve aparecer as opções:
+## Requisitos Funcionais
 
-1. X-burger 
-2. X-salada
+1. Tela Inicial:
+   - O totem deve exibir um menu onde o cliente pode escolher entre "Lanche" (1) ou "Bebida" (2).
+   - Qualquer entrada fora dessas opções deve mostrar a mensagem "Opção inválida, tente novamente" e exibir o menu novamente.
+   - A entrada deve ser um número inteiro.
+
+2. Opções de Lanche:
+   - Ao escolher "Lanche" (1), o cliente deve selecionar entre "X-burger" (1) ou "X-salada" (2).
+   - Entradas inválidas devem mostrar a mensagem "Opção inválida, tente novamente".
+   - A entrada deve ser um número inteiro.
+
+3. Opções de Bebida:
+   - Ao escolher "Bebida" (2), o cliente deve selecionar entre "Refrigerante" (1) ou "Suco" (2).
+   - Entradas inválidas devem mostrar a mensagem "Opção inválida, tente novamente".
+   - A entrada deve ser um número inteiro.
+
+4. Quantidade e Carrinho de Compras:
+   - Após selecionar o item desejado e a quantidade, o sistema deve adicionar os detalhes do pedido ao carrinho de compras.
+   - O valor total do pedido até o momento deve ser exibido.
+
+5. Edição e Remoção de Itens:
+   - O cliente pode editar a quantidade de itens no carrinho ou remover um item.
+   - Ao remover um item, o sistema deve exibir o carrinho atualizado.
+
+6. Finalização do Pedido:
+   - O cliente pode finalizar o pedido, fornecendo a forma de pagamento: cartão de crédito, cartão de débito, vale refeição ou dinheiro.
+   - Caso a forma de pagamento seja dinheiro, o sistema deve calcular o troco, se necessário.
+
+## Executando o Projeto
+
+1. Clone este repositório.
+2. Certifique-se de ter as configurações apropriadas para executar o projeto Kotlin.
+3. Execute o sistema de totem de auto-atendimento.
+
+## Contribuição
+
+Contribuições são bem-vindas! Se você encontrar problemas ou tiver sugestões para melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
 
-a. Caso a pessoa tente escolher algum item fora das opções acima, o sistema deve mostrar a mensagem “Opção inválida, tente novamente” e mostrar novamente o menu inicial do
-lanche. 
-b. Caso a pessoa tente inserir alguma informação do tipo String, o sistema deve retornar uma mensagem: “Formato inválido, para escolher o item, você deve informar o número dele”. 
 
-- Quando a pessoa selecionar o lanche que quer comprar, o sistema deve perguntar a quantidade do lanche solicitado que a pessoa quer comprar, após o usuário selecionar o lanche e a quantidade, o carrinho de compra deve adicionar o código, quantidade, nome e valor do lanche e mostrar o valor total do pedido até aquele momento. Sendo que os valores dos lanches são: 
-a. X-burger - R$ 10,00 
-b. X-salada - R$ 12,00 
-
-- Quando digitar 2, ou seja, o item Bebida, deve aparecer as opções:
-
-1. Refrigerante 
-2. Suco
-
-
-a. Caso a pessoa tente escolher algum item fora das opções acima, o sistema deve mostrar a mensagem “Opção inválida, tente novamente” e mostrar novamente o menu inicial da bebida. 
-b. Caso a pessoa tente inserir alguma informação do tipo String, o sistema deve retornar uma mensagem: “Formato inválido, para escolher o item, você deve informar o número dele”. 
-
-- Quando a pessoa selecionar a bebida que quer comprar, o sistema deve perguntar a quantidade de bebida que a pessoa quer comprar, após o usuário selecionar a bebida e a quantidade, o carrinho de compra deve adicionar o código, a quantidade, nome e valor da bebida e mostrar o valor total do pedido até aquele momento. Sendo que os valores das bebidas são:
-
-a. Refrigerantes - R$ 8,00 
-b. Sucos - R$ 6,00 
-
-- Após a pessoa informar o lanche ou bebida que quer comprar e ver o valor total do pedido até aquele momento, o sistema deve perguntar se a pessoa deseja incluir mais itens, editar um item, remover item ou se deseja finalizar o pedido. 
-
-a. Se ela desejar comprar mais itens, o sistema deve voltar para o menu inicial. 
-
-b. Se ela desejar editar um item, o sistema deve solicitar o código do produto que deseja editar. Após receber um código válido e encontrar o produto, o sistema deverá perguntar qual a nova quantidade de itens que o usuário deseja adicionar, após o usuário atualizar o valor da quantidade, o sistema deve atualizar o valor total da compra e exibir novamente o carrinho atualizado. 
-
-c. Se ela desejar remover itens, o sistema deve solicitar o código do produto válido que deseja remover (o código é um número que deverá ser adicionado ao produto automaticamente quando for adicionado ao carrinho), após ser feita a remoção do produto a partir do código, o sistema deve exibir o carrinho de compras atualizado. 
-
-d. Se ela desejar finalizar o pedido, o sistema deve mostrar o valor total do pedido e quais os itens que ela selecionou e perguntar qual a forma de pagamento, sendo que o sistema deve aceitar cartão de crédito, cartão de débito, vale refeição e dinheiro. 
-
-i. Após a pessoa selecionar uma das opções: cartão de crédito, cartão de débito ou vale refeição, o sistema mostra a seguinte mensagem: "Compra finalizada com sucesso! Boa refeição”. 
-
-ii. Caso a pessoa selecione dinheiro, o sistema deve pedir qual o valor em dinheiro que o usuário usará para pagar,
-caso seja um valor mais alto que o valor total da compra, o sistema deverá exibir o troco que o usuário deverá receber. 
-
-iii. Caso a pessoa tente escolher alguma coisa fora das opções acima, o sistema deve mostrar a mensagem “Opção inválida, tente novamente” e mostrar novamente as opções de cartão de crédito, cartão de débito, vale refeição e dinheiro. 
